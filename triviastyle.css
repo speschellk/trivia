@@ -1,0 +1,38 @@
+html {
+  font-family: Helvetica, Arial;
+  background: white;
+}
+
+p {
+  color: green
+}
+
+h1 {
+  text-align: center
+  margin-top: 60px;
+}
+
+a {
+  text-decoration: none
+}
+
+img {
+  padding-right: 10px;
+}
+
+nav li {
+  display: inline;
+  margin-right: 15px;
+}
+
+nav{
+  /*position: fixed;*/
+  top: 0;
+  left: 0;
+  background: white;
+  width: 100%;
+}
+
+#main-content{
+  display: block;
+}
