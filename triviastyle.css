@@ -10,12 +10,17 @@ html {
 }
 
 h1 {
-  text-align: center
+  text-align: center;
   top: 60px;
 }
 
+h4 {
+  text-align: center;
+}
+
 a {
-  text-decoration: none
+  text-decoration: none;
+  position: center;
 }
 
 img {
@@ -24,15 +29,17 @@ img {
 }
 
 #primary-nav {
-  position: absolute;
-
+  position: center;
+  /*position: absolute;
+  margin-right: 0px;*/
 }
 
 nav {
   /*position: fixed;*/
-  margin-right: 0px;
-  top: 0;
+  /*margin-right: 0px;
+  top: 0;*/
   width: 100%;
+  position: center;
 }
 
 nav li {
@@ -46,8 +53,18 @@ nav span {
 
 #categories {
   width: 80%;
+  position: center;
 }
 
 #categories div {
   display: inline-block;
+  position: center;
+}
+
+#main-content {
+  position: center;
+}
+
+form {
+  display: ;
 }
