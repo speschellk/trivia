@@ -1,5 +1,3 @@
-console.log('hello world');
-
 $(document).ready(function(){
 
 
@@ -26,25 +24,29 @@ $("#contact").hide();
     //provide value for clicked element's href attribute
     var id = $(this).attr("href");
     //show the element with the id that was clicked
-  	$(id).show();
-  	$(id).fadeIn();
+    $(id).show();
+    $(id).fadeIn();
     $(this).css("color","grey");
   })
 
   /////CATEGORY NAVIGATION////////
   // add links to each category that open content on that page
   // and hide content home page
-	$("div.trivia-category").click(function(){ 
-	  console.log('category button clicked');
+  $("div.trivia-category").click(function(){ 
+    $.getJSON("https://www.googleapis.com/youtube/v3/videos?id=7lCDEYXw3mM&key=AIzaSyCLowtBqq3Oo7jG0DJWvZwcNf3hmNM0n4A&part=snippet,contentDetails,statistics,status", function(data){
+      console.log(data);
+    });
+
+   /* console.log('category button clicked');
     //hide main cateogry buttons on click of a category div element
-		$("#categories").hide();
+    $("#categories").hide();
     //provide value for clicked element's id
     var c = $(this).attr('class').split(' ')[1];
+    console.log(c);
     console.log('clicked second class is ' + c)
     //show the content element with class of what was clicked
     // TODO: add if statement comparing if c===[second class of content]
-      //$(c).show();
-
+    $("#main-content").show();*/
   });
 
 });
