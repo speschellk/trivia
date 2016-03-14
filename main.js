@@ -3,18 +3,18 @@ $(document).ready(function(){
 
 //hide all page content elements other than main
 //$("#main").show();
-$("#categories").show();
+/*$("#categories").show();
 $("#main-content").hide();
 $("#trivia-basics").hide();
 $("#about").hide();
-$("#contact").hide();
+$("#contact").hide();*/
 
   /////PAGE NAVIGATION////////
   //add event listener to make nav actually navigate
   //create an click event listener
   //do this when someone clicks on a link 
   //in the nav bar
-  $("nav a").click(function(){
+  /*$("nav a").click(function(){
      //hide all content again
      $("#categories").hide(); 
      $("#main-content").hide();
@@ -27,7 +27,20 @@ $("#contact").hide();
     $(id).show();
     $(id).fadeIn();
     $(this).css("color","grey");
-  })
+  })*/
+
+  $('a[href^="#"]').on('click',function (e) {
+      e.preventDefault();
+
+      var target = this.hash;
+      var $target = $(target);
+
+      $('html, body').stop().animate({
+          'scrollTop': $target.offset().top
+      }, 900, 'swing', function () {
+          window.location.hash = target;
+      });
+  });
 
   /////CATEGORY NAVIGATION////////
   // add links to each category that open content on that page
