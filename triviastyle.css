@@ -1,5 +1,6 @@
 body, html {
 	height: 100%;
+	width: 100%;
 	font-family: 'Lato',sans-serif;
     font-weight: 300;
     font-style: normal;
@@ -36,7 +37,7 @@ body, html {
 	right: 100px;
 }
 
-nav li, a {
+.navigation li, a {
 	position: relative;
 	display: inline;
 	padding: 8px;
@@ -53,6 +54,13 @@ nav li, a {
 }
 
 #categories {
+	height: 100%;
+	width: 100%;
+	padding: 0px;
+	margin: 0px;
+}
+
+#categories-block {
   	position: relative;
   	height: 530px;
   	width: 850px;
@@ -63,14 +71,14 @@ nav li, a {
 	border: none;
 }
 
-#categories img {
+#categories-block img {
 	height: 130px;
 	width: 130px;
 	padding: 0px;
 	margin: 55px;
 }
 
-.trivia-category {
+#categories-block .trivia-category {
 	background-color: #ffffff;
 	border-radius: 250px;
 	height: 240px;
@@ -82,8 +90,91 @@ nav li, a {
 	display: inline-block;
 }
 
-#about img {
-	border-radius: 150px;
+.image {
+	border-radius: 50px;
+}
+
+#about {
+	height: 100%;
+	width: 100%;
+	position: relative;
+	background-color: #ffffff;
+}
+
+#about article {
+	height: 80%;
+	width: 85%;
+	position: relative;
+	top: 60px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#about .about-us {
+	height:100%;
+	width:45%;
+	padding: 0px;
+	margin-top: 50px;
+}
+
+#about .about-us img {
+	padding-right: 12px;
+	margin: 0px;
+	float: left;
+}
+
+#about-KK {
+	float: left;
+}
+
+#about-KC {
+	float: right;
+}
+
+.social-media a {
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.social-media img {
+	height: 30px;
+	width: 30px;
+}
+
+#contact {
+	height: 100%;
+	width: 100%;
+	color: #ffffff;
+}
+
+#contact-div {
+	height: 100%;
+	width: 100%;
+	position: relative;
+	top: 60px;
+}
+
+input, textarea {
+	height: 20px;
+	width: 350px;
+	padding: 10px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 14px;
+	border: none;
+	border-radius: 4px;
+}
+
+form textarea {
+	height: 150px;
+}
+
+#submit-button {
+	height: 45px;
+	width: 200px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 /*!
@@ -117,4 +208,3 @@ nav li, a {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
 }
-
