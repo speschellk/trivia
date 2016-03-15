@@ -1,7 +1,7 @@
 var channelName = 'Sports';
 var vidWidth = '500';
 var vidHeight = '400';
-var vidResults = 10;
+var vidResults = 9;
 var channels = ["Education", "Sports", "Sports News", "News", "Entertainment News"]
 var Playlists = ["That's a Good Question",]
 
