@@ -144,14 +144,16 @@ body, html {
 #contact {
 	height: 100%;
 	width: 100%;
-	color: #ffffff;
+	color: #777;;
 }
 
 #contact-div {
 	height: 100%;
-	width: 100%;
-	position: relative;
+	width: 45%;
+	position: center;
 	top: 60px;
+	background-color: #ffffff;
+	padding-left: 12px;
 }
 
 input, textarea {
@@ -164,6 +166,7 @@ input, textarea {
 	font-size: 14px;
 	border: none;
 	border-radius: 4px;
+	background-color:#F8F7FF;
 }
 
 form textarea {
@@ -175,6 +178,24 @@ form textarea {
 	width: 200px;
 	margin-left: auto;
 	margin-right: auto;
+	background-color: #FAFAFA;
+	border: 1px solid #dcdcdc;
+	box-shadow: none;
+	border: 2px solid transparent;
+	color: #777;
+	text-shadow: 0 1px rgba(0,0,0,0.1);
+	border-radius: 4px;
+	font-weight:bold;
+	font-size: 14px;
+	text-align: center;
+	white-space: nowrap;
+	padding: 0 8px;
+}
+	
+	a:hover img.imagedropshadow {
+	-moz-box-shadow: 1px 1px 5px #999; 
+	-webkit-box-shadow: 1px 1px 5px #999; 
+	box-shadow: 1px 1px 5px #999; 
 }
 
 /*!
