@@ -83,8 +83,15 @@ $(document).ready(function(){
   });
 
  
-
-  
+  $('#contact_link').on('click', function(){
+       // hide all content again
+      console.log("contact link clicked");
+	  $("#contact_link").remove();
+	  $("#categories").hide();
+	  $('#vid_container').hide();
+      $("#about").hide();
+      $("#contact").show();
+  });
 
  
 
