@@ -285,7 +285,7 @@ form textarea {
 }
 
 .card__back {
-  background-color: #1e1e1e;
+  background-color: #120514;
   -webkit-transform: rotateY(-180deg);
           transform: rotateY(-180deg);
 }
