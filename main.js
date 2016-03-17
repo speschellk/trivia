@@ -1,23 +1,36 @@
 //var channelName = 'Sports';
 var vidWidth = '500';
 var vidHeight = '400';
-var vidResults = 9;
+var vidResults = 6;
 //var channels = ["Education", "Sports", "Sports News", "News", "Entertainment News"]
 //var Playlists = ["That's a Good Question",]
 
 $(document).ready(function(){
 
 	console.log('hello world');
-	$("#contact").hide();
+
+//hide all page content elements other than main
+// //$("#main").show();
+// $("#categories").show();
+// $("#main-content").hide();
+// $("#trivia-basics").hide();
+// $("#about").hide();
 
   /////CATEGORY NAVIGATION////////
   //add event listener to make nav actually navigate
   //create an click event listener
   //do this when someone clicks on a category image
   $("div.trivia-category").click(function(){
+     // hide all content again
+    //  $("#categories").hide();
+    //  $("#main-content").hide();
+    //  $("#trivia-basics").hide();
+    //  $("#about").hide();
+    //  $("#contact").show();
     //provide value for clicked element's href attribute
     var channelName = $(this).attr("id");
 	//make sure category ids have names of channels
+
  	$.get("https://www.googleapis.com/youtube/v3/channels", {
 	 		part: 'contentDetails',
 			forUsername: channelName,
@@ -32,35 +45,33 @@ $(document).ready(function(){
 			}	
 	);
 
- 	/////YOUTUBE PLAYLIST/////
- 	//display playlist for relevant category ID
 	function getVids(pid){
-	 	$.get(
-			"https://www.googleapis.com/youtube/v3/playlistItems", {
-		 		part: 'snippet' ,
-				maxResults: vidResults,
-				playlistId: pid,	
-				key: 'AIzaSyCLowtBqq3Oo7jG0DJWvZwcNf3hmNM0n4A'},
-				function(data) {
-					var output;
-					$.each(data.items, function(i, item){
-						console.log(item);
-						vidTitle= item.snippet.title;
-						videoId = item.snippet.resourceId.videoId;
-						//output = '<li>'+vidTitle+'</li>';
-						output = '<li><iframe height="+vidHeight+" width="+vidWidth+" src=\"//www.youtube.com/embed/'+videoId+'"\></iframe></li>';
-						//Append to results listStyleType
-						$('#results').append(output);
-					})
-				}	
-		);
+ 	$.get(
+		"https://www.googleapis.com/youtube/v3/playlistItems", {
+	 		part: 'snippet' ,
+			maxResults: vidResults,
+			playlistId: pid,	
+			key: 'AIzaSyCLowtBqq3Oo7jG0DJWvZwcNf3hmNM0n4A'},
+			function(data) {
+				console.log(data.items.length);
+				var output="";
+				$.each(data.items, function(i, item){
+					console.log(item);
+					vidTitle= item.snippet.title;
+					videoId = item.snippet.resourceId.videoId;
+					//output = '<li>'+vidTitle+'</li>';
+					output += '<li><iframe height="+vidHeight+" width="+vidWidth+" src=\"//www.youtube.com/embed/'+videoId+'"\></iframe></li>';
+					//Append to results listStyleType
+				});
+			$('#results').html(output);
+			}	
+	);
 	}
 
   })
 
-	/////SMOOTH SCROLL FUNCTION/////
-	//When click nav link, get ID of linked section
-	//and scroll smoothly to that section
+ //smooth scrolling on main page
+ 
   $('a[href^="#"]').on('click',function (e) {
       e.preventDefault();
 
@@ -74,31 +85,6 @@ $(document).ready(function(){
       });
   });
 
-  	/////SMOOTH SCROLL TO VIDEOS/////
-  	//When click on category, scroll to video container
-    $('.card').on('click',function (e) {
-      e.preventDefault();
 
-      $('html, body').stop().animate({
-          'scrollTop': $("#videos").offset().top
-      }, 900, 'swing', function () {
-          window.location.hash = "#videos";
-      });
-  });
-
- 	/////CONTACT LINK/////
- 	//When click on Contact link, show contact form
- 	//hide other sections of site
-  $('#contact_link').on('click', function(){
-       // hide all content again
-      console.log("contact link clicked");
-	  $("#contact_link").remove();
-	  $("#categories").hide();
-	  $('#vid_container').hide();
-      $("#about").hide();
-      $("#contact").show();
-  });
-
- 
 
 });
