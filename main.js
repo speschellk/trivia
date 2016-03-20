@@ -59,18 +59,6 @@ $(document).ready(function(){
 
 	function showVids(output){
 		$("#vid_container").show();
-		/*$("#vid_container").css({
-			"position": "absolute",
-			"height": "83%",
-			"width": "75%",
-			"top": "10%",
-			"left": "10%",
-			"right": "10%",
-			"padding": "0px",
-			"display": "block",
-			"background-color": "#ffffff",
-			"z-index": "1"
-			});*/
 		$("#results").html(output);
 	}
   })
