@@ -1,18 +1,19 @@
 //var channelName = 'Sports';
 var vidWidth = '500';
 var vidHeight = '400';
-var vidResults = 6;
+var vidResults = 9;
 //var channels = ["Education", "Sports", "Sports News", "News", "Entertainment News"]
 //var Playlists = ["That's a Good Question",]
 
 $(document).ready(function(){
 
 	console.log('hello world');
+	$("#vid_container").hide();
 
   /////CATEGORY NAVIGATION////////
-  //add event listener to make nav actually navigate
-  //create an click event listener
-  //do this when someone clicks on a category image
+  /*add event listener to make nav actually navigate
+  create an click event listener
+  do this when someone clicks on a category image*/
   $("div.trivia-category").click(function(){
     //provide value for clicked element's href attribute
     var channelName = $(this).attr("id");
@@ -50,24 +51,47 @@ $(document).ready(function(){
 						output += '<li><iframe height="+vidHeight+" width="+vidWidth+" src=\"//www.youtube.com/embed/'+videoId+'"\></iframe></li>';
 						//Append to results listStyleType
 					});
-				$('#results').html(output);
+				//$('#results').html(output);
+				showVids(output);
 				}	
 		);
 	}
+
+	function showVids(output){
+		$("#vid_container").show();
+		/*$("#vid_container").css({
+			"position": "absolute",
+			"height": "83%",
+			"width": "75%",
+			"top": "10%",
+			"left": "10%",
+			"right": "10%",
+			"padding": "0px",
+			"display": "block",
+			"background-color": "#ffffff",
+			"z-index": "1"
+			});*/
+		$("#results").html(output);
+	}
   })
 
- //smooth scrolling on main page
- 
-  $('a[href^="#"]').on('click',function (e) {
-      e.preventDefault();
+ 	//smooth scrolling on main page
+  	$('a[href^="#"]').on('click',function (e) {
+    	e.preventDefault();
 
-      var target = this.hash;
-      var $target = $(target);
+    	var target = this.hash;
+    	var $target = $(target);
 
-      $('html, body').stop().animate({
+    	$('html, body').stop().animate({
           'scrollTop': $target.offset().top
-      }, 900, 'swing', function () {
+    	}, 900, 'swing', function () {
           window.location.hash = target;
-      });
-  });
+    	});
+  	});
+
+
+	$("#close_button").click(function() {
+		console.log("clicked");
+		$("#vid_container").hide();
+	});
 });
