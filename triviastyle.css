@@ -13,9 +13,9 @@ body, html {
 .logo {
 	position: fixed;
 	top: 5px;
-	left: 100px;
+	left: 7%;
 	color: white;
-	z-index: 2;
+	z-index: 3;
 	font-family: 'Permanent Marker', sans-serif;
 	font-size: 28px;
 }
@@ -29,12 +29,12 @@ body, html {
 	margin: 0px;
 	padding: 0px;
 	background: #53185E;
-	z-index: 1;
+	z-index: 2;
 }
 
-.group {
+.nav-group {
 	position: fixed;
-	right: 100px;
+	right: 7%;
 }
 
 .navigation li, a {
@@ -53,6 +53,37 @@ body, html {
 	color: #666666;
 }
 
+#vid_container {
+	position: absolute;
+	height: 83%;
+	width: 75%;
+	top: 10%;
+	left: 10%;
+	right: 10%;
+	padding: 0px;
+	display: block;
+	background-color: #ffffff;
+	z-index: 1;
+}
+
+#vid_container li {
+	display: inline-block;
+	padding-left: 3px;
+	padding-right: 3px;
+	padding-top: 1.5px;
+	padding-bottom: 1.5px;
+	background-color: red;
+}
+
+#close_button {
+	position: absolute;
+	top: 2%;
+	right: 1%;
+	height: 20px;
+	width: 20px;
+
+}
+
 #categories {
 	height: 100%;
 	width: 100%;
@@ -62,12 +93,12 @@ body, html {
 
 #categories-block {
   	position: relative;
-  	height: 530px;
-  	width: 850px;
-  	top: 30px;
-	padding: 50px;
-	margin-left: auto;
-	margin-right: auto;
+  	height: 80%;
+  	width: 66%;
+  	top: 10%;
+  	left: 17%;
+  	right: 17%;
+	padding: 2px;
 	border: none;
 }
 
@@ -92,32 +123,6 @@ body, html {
 	border-radius: 50px;
 }
 
-#videos {
-	height: 100%;
-	width: 100%;
-	padding: 0px;
-	margin: 0px;
-	background-color: #ffffff;
-}
-
-#vid_container {
-	position: relative;
-	top: 100px;
-	padding:0px;
-	width: 80%;
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-#vid_container li {
-	display: inline-block;
-	padding-left: 3px;
-	padding-right: 3px;
-	padding-top: 1.5px;
-	padding-bottom: 1.5px;
-}
-
 #about {
 	height: 100%;
 	width: 100%;
@@ -129,7 +134,7 @@ body, html {
 	height: 80%;
 	width: 85%;
 	position: relative;
-	top: 60px;
+	top: 10%;
 	margin-right: auto;
 	margin-left: auto;
 }
@@ -151,8 +156,18 @@ body, html {
 	float: left;
 }
 
+#KK-image {
+	height: 220px;
+	width: 210px;
+}
+
 #about-KC {
 	float: right;
+}
+
+#KC-image {
+	height: 220px;
+	width: 220px;
 }
 
 .social-media a {
@@ -176,7 +191,7 @@ body, html {
 }
 
 #contact_link_color {
-	color:  #777;
+	color:  #777777;
 	font-variant:small-caps; 
 	text-decoration:underline;
 }
@@ -184,7 +199,7 @@ body, html {
 #contact {
 	height: 100%;
 	width: 100%;
-	color: #777;
+	color: #777777;
 	height: 20px;
 	width: 350px;
 	padding: 10px;
@@ -278,13 +293,13 @@ form textarea {
   transform: scale(1.1);
 }
 
-#vid_container{
+/*#vid_container{
 	display:block;
 	width:800px;
 	margin:auto;
 	overflow:auto;
 	padding:15px;
-}
+}*/
 
 .card {
   position: relative;
