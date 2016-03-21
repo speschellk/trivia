@@ -91,8 +91,8 @@ $(document).ready(function(){
 		console.log("clicked");
 		//$("#form_container").show();
 		//$("#contact").show();
-		$("#contact").slideDown( 2000 );
-		$("#form_container").slideDown( 2000 );
+		$("#contact").slideDown("slow");
+		$("#form_container").slideDown("slow");
 	});
 		
 		
