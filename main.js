@@ -65,8 +65,7 @@ $(document).ready(function(){
   })
 
  	//smooth scrolling on main page
-  //	$('a[href^="#"]').on('click',function (e) {
-	 $('nav a').on('click',function (e) {
+	$('a[href^="#"]').on('click',function (e) {
     	e.preventDefault();
 
     	var target = this.hash;
