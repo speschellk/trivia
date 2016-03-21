@@ -89,8 +89,10 @@ $(document).ready(function(){
 	
 	$("#contact_link").click(function(){
 		console.log("clicked");
-		$("#form_container").show();
-		$("#contact").show();
+		//$("#form_container").show();
+		//$("#contact").show();
+		$("#contact").slideDown( 2000 );
+		$("#form_container").slideDown( 2000 );
 	});
 		
 		
