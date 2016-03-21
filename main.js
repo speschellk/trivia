@@ -47,11 +47,9 @@ $(document).ready(function(){
 						console.log(item);
 						vidTitle= item.snippet.title;
 						videoId = item.snippet.resourceId.videoId;
-						//output = '<li>'+vidTitle+'</li>';
 						output += '<li><iframe height="+vidHeight+" width="+vidWidth+" src=\"//www.youtube.com/embed/'+videoId+'"\></iframe></li>';
-						//Append to results listStyleType
 					});
-				//$('#results').html(output);
+
 				showVids(output);
 				}	
 		);
@@ -81,6 +79,6 @@ $(document).ready(function(){
 	$("#close_button").click(function() {
 		console.log("clicked");
 		$("#vid_container").hide();
-		$("#results").remove();
+		player.pauseVideo();
 	});
 });
