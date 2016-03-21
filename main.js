@@ -87,8 +87,8 @@ $(document).ready(function(){
 	
 	$("#contact_link").click(function(){
 		console.log("clicked");
-		$("#contact_container").show();
-		$("contact").show();
+		$("#form_container").show();
+		$("#contact").show();
 	});
 		
 		
