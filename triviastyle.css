@@ -307,8 +307,13 @@ body, html {
 	text-decoration:underline;
 }
 
+#outter_form_container{
+	position:relative;
+}
+
 #form_container {
 	position: absolute;
+	bottom:0;
 	height: 85%;
 	width:50%;
 	left: 10%;
