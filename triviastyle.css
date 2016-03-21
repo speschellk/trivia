@@ -308,18 +308,16 @@ body, html {
 }
 
 #form_container {
-	position: relative;
-	bottom:0;
+	position: absolute;
 	height: 100%;
-	width: 500px;
-	top: 10%;
+	width:50%;
 	left: 10%;
 	right: 10%;
 	margin:auto;
 	display: block;
 	background-color: #000000;
 	z-index: 1;
-	opacity: 0.9;
+	opacity: 0.87;
 }
 
 #contact {
@@ -331,11 +329,9 @@ body, html {
 	width: 350px;
 	padding: 10px;
 	display: block;
-	margin-top:50px;
 	margin-left: auto;
 	margin-right: auto;
 	font-size: 14px;
-	position:absolute;
 	z-index:3;
 	opacity:1;
 }
