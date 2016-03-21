@@ -50,15 +50,18 @@ $(document).ready(function(){
 						output += '<li><iframe height="+vidHeight+" width="+vidWidth+" src=\"//www.youtube.com/embed/'+videoId+'"\></iframe></li>';
 					});
 
-				showVids(output);
+				//showVids(output);
+				$("#vid_container").show();
+				$("#results").html(output);
+				
 				}	
 		);
 	}
 
-	function showVids(output){
-		$("#vid_container").show();
-		$("#results").html(output);
-	}
+//	function showVids(output){
+//		$("#vid_container").show();
+//		$("#results").html(output);
+//	}
   })
 
  	//smooth scrolling on main page
