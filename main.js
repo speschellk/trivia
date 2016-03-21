@@ -84,4 +84,17 @@ $(document).ready(function(){
 		$("#vid_container").hide();
 		$("#results").html("");
 	});
+	
+	$("#contact_link").click(function(){
+		console.log("clicked");
+		$("#contact_container").show();
+		$("contact.html").show();
+	}
+		
+		
+	$("#form_close_button").click(function() {
+		console.log("clicked");
+		$("#contact_container").hide();
+	});
+	
 });
