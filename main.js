@@ -81,6 +81,6 @@ $(document).ready(function(){
 	$("#close_button").click(function() {
 		console.log("clicked");
 		$("#vid_container").hide();
-		$("#results").remove();
+		$("#results").remove(output);
 	});
 });
