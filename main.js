@@ -79,6 +79,6 @@ $(document).ready(function(){
 	$("#close_button").click(function() {
 		console.log("clicked");
 		$("#vid_container").hide();
-		player.pauseVideo();
+		$("#results").remove();
 	});
 });
