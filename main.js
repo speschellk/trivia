@@ -9,6 +9,8 @@ $(document).ready(function(){
 
 	console.log('hello world');
 	$("#vid_container").hide();
+	$("#form_container").hide();
+	$("#contact").hide();
 
   /////CATEGORY NAVIGATION////////
   /*add event listener to make nav actually navigate
