@@ -89,7 +89,7 @@ $(document).ready(function(){
 		console.log("clicked");
 		$("#contact_container").show();
 		$("contact").show();
-	}
+	});
 		
 		
 	$("#form_close_button").click(function() {
