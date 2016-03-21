@@ -95,8 +95,9 @@ $(document).ready(function(){
 		
 		
 	$("#form_close_button").click(function() {
-		console.log("clicked");
-		$("#contact_container").hide();
+		console.log("form close button clicked");
+		$("#form_container").hide();
+		$("#contact").hide();
 	});
 	
 });
