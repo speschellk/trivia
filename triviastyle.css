@@ -207,6 +207,8 @@ body, html {
 	margin-left: auto;
 	margin-right: auto;
 	font-size: 14px;
+	position:relative;
+	z-index:2;
 }
 
 input, textarea {
@@ -357,16 +359,17 @@ form textarea {
 
 
 #form_container {
-	position: absolute;
+	position: relative;
 	height: 83%;
 	width: 60%;
 	top: 10%;
 	left: 10%;
 	right: 10%;
 	padding: 0px;
+	margin:auto;
 	display: block;
 	background-color: #000000;
-	z-index: 1;
+	z-index: 2;
 	opacity: 0.4;
 }
 
