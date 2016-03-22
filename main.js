@@ -59,11 +59,6 @@ $(document).ready(function(){
 				}	
 		);
 	}
-
-//	function showVids(output){
-//		$("#vid_container").show();
-//		$("#results").html(output);
-//	}
   })
 
  	//smooth scrolling on main page
